@@ -26,7 +26,6 @@ void enCodingExample() {
     buffer_len = sizeof(buffer);
     CHHBusMsgReader message_read(&message, buffer, buffer_len);
     message_read.decode().showCHHBusMsg();
-    // message_read.showCHHBusMsg();
     CHHBusMsg_Destroy(&message);
 }
 

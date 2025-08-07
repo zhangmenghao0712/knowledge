@@ -106,7 +106,7 @@ uint32_t CHHBusMsgWriter::getLength() const {
 bool CHHBusMsgWriter::showMessage() {
     printf("message: ");
     for (uint32_t i = 0; i < m_pos; i++) {
-        printf("%u ", m_buffer[i]);
+        printf("%x ", m_buffer[i]);
     }
     printf("\r\n");
     return true;
@@ -293,7 +293,7 @@ void CHHBusMsgReader::showCHHBusMsg() {
             printf("%x ", m_msg->body[i]);
         }
         printf("\r\n");
-        printf("crc16: %u\r\n", m_msg->crc16);
+        printf("crc16: %x\r\n", m_msg->crc16);
     } else {
         printf("m_buffer is unlawful!\r\n");
     }
