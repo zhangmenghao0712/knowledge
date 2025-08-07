@@ -103,6 +103,7 @@ public:
     // 检查是否有效
     bool isValid() const;
 
+    // 打印结构体数据
     void showCHHBusMsg();
 };
 

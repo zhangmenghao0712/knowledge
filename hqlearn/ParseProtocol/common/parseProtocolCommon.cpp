@@ -24,3 +24,12 @@ uint16_t crc16_calculate(const uint8_t *data, uint32_t length) {
 
     return crc;
 }
+
+void CHHBusMsg_Destroy(CHHBusMsg *msg) {
+    if (msg != NULL) {
+        if (msg->body != NULL) {
+            delete[] msg->body;
+            msg->body = NULL; // 避免野指针
+        }
+    }
+}

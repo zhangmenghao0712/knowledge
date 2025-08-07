@@ -17,6 +17,8 @@ typedef struct
     uint16_t crc16;     // 2B CRC16校验
 } CHHBusMsg;
 
+void CHHBusMsg_Destroy(CHHBusMsg *msg);
+
 // CRC16计算函数
 uint16_t crc16_calculate(const uint8_t *data, uint32_t length);
 
