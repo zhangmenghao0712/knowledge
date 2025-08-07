@@ -7,7 +7,7 @@ uint16_t crc16_calculate(const uint8_t *data, uint32_t length) {
     }
 
     uint16_t crc = 0;
-    const uint16_t polynomial = 0x1021; // XMODEM多项式
+    const uint16_t polynomial = PARSE_PROTOCOL_XMODEM_NUM; // XMODEM多项式
 
     for (uint32_t i = 0; i < length; ++i) {
         crc ^= static_cast<uint16_t>(data[i]) << 8;

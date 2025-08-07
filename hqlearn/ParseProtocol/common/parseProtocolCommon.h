@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <string.h>
 
+#define PARSE_PROTOCOL_XMODEM_NUM (0x1021) // XMODEM多项式
+#define PARSE_PROTOCOL_MESSAGE_LEN (14)
 // 消息结构定义
 typedef struct
 {
